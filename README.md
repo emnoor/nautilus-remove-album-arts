@@ -13,3 +13,9 @@ On ubuntu run:
     mkdir -p ~/.local/share/nautilus-python/extensions
 
     wget -O - "https://raw.githubusercontent.com/emnoor/nautilus-remove-album-arts/master/nautilus-remove-album-arts.py" > ~/.local/share/nautilus-python/extensions/nautilus-remove-album-arts.py
+
+Then kill the running nautilus process to load the extension:
+
+    killall nautilus
+
+Start nautilus from Dash.
