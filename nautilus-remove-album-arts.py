@@ -20,10 +20,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import sys
+
 from gi.repository import Nautilus, GObject
 import eyed3
 import eyed3.id3
-from urllib2 import unquote
+
+if sys.version_info.major < 3:
+    from urllib2 import unquote
+else:
+    from urllib.parse import unquote
+
 
 class RemoveAlbumArtsExtention(GObject.GObject, Nautilus.MenuProvider):
 
